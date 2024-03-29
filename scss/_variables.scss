@@ -1,0 +1,44 @@
+/* ---------- 1.Variables ----------*/
+    $nav-height-desktop: 3.75rem; //высота меню десктоп, таблет 60px
+    $nav-height-mob: 3rem; //высота мобилка 48px;
+
+    //Color
+    $color-white:#ffffff; 
+    $color-grey: #b7b7b7; //#b7b7b7;
+    $color-orange:#f87719;
+
+    $color-orange-gradient: (145deg, #ffc226 0%, #f84119 100%);
+
+    $background-black: #99A2AA; //#111111;
+    
+    //Fonts
+    $font-Roboto: Roboto, sans-serif;
+    $font-Montserrat: Montserrat, sans-serif;
+    $font-Gilroy: Gilroy, sans-serif;
+
+
+    //Flex
+    $gap: 16px;
+    $width: 1216px;
+
+:root {
+    // Color
+    --color-grey: #{$color-grey}; //var(--color-grey, $color-grey);
+    --color-white: #{$color-white}; //var(--color-white, $color-white);
+    --color-orange: #{$color-orange}; //var(--color-orange, $color-orange);
+
+    --background-black: #{$background-black}; //var(--background-black, $background-black);
+    
+   
+    /* Fonts */
+    --font-Roboto: #{$font-Roboto}; //var(--font-Roboto);
+    --font-Montserrat: #{$font-Montserrat};
+    --font-Gilroy: #{$font-Gilroy};
+
+    /* size */
+    --nav-height-desktop: #{$nav-height-desktop}; //var(--nav-height-desktop, $nav-height-desktop);
+
+    /* box */
+    --width: #{$width};
+    --gap: #{$gap};
+}
