@@ -1,44 +1,40 @@
-/* ---------- 1.Variables ----------*/
-    $nav-height-desktop: 3.75rem; //высота меню десктоп, таблет 60px
-    $nav-height-mob: 3rem; //высота мобилка 48px;
+//Color
+$color-dark-primary: #665A4E; //Dark Primary
+$color-primary: #AAA39D; //Primary
+$color-light-grey: #AAA39D;//Light Grey
+$color-dark-olive: #68846D; //Dark olive
+$color-olive: #A5BDA5; //olive
+$color-light-olive: #EBF0EB; //Light olive
+$color-black: #171411;
+$color-white: #ffffff;
 
-    //Color
-    $color-white:#ffffff; 
-    $color-grey: #b7b7b7; //#b7b7b7;
-    $color-orange:#f87719;
+//Fonts
+$font-basic: 'Satoshi-Regular', Arial, Helvetica, sans-serif;
+$font-Clash: "ClashDisplay-Variable", Arial, Helvetica, sans-serif;
 
-    $color-orange-gradient: (145deg, #ffc226 0%, #f84119 100%);
+// box
+$width: 90rem; //1440px;
 
-    $background-black: #99A2AA; //#111111;
-    
-    //Fonts
-    $font-Roboto: Roboto, sans-serif;
-    $font-Montserrat: Montserrat, sans-serif;
-    $font-Gilroy: Gilroy, sans-serif;
-
-
-    //Flex
-    $gap: 16px;
-    $width: 1216px;
 
 :root {
     // Color
-    --color-grey: #{$color-grey}; //var(--color-grey, $color-grey);
+    --color-dark-primary: #{$color-dark-primary}; //var(--color-dark-primary, $color-dark-primary);
+    --color-primary: #{$color-primary}; //var(--color-primary, $color-primary);
+    --color-light-grey: #{$color-light-grey}; //var(--color-light-grey, $color-light-grey);
+    --color-dark-olive: #{$color-dark-olive}; //var(--color-dark-olive, $color-dark-olive);
+    --color-olive: #{$color-olive}; //var(--color-olive, $color-olive);
+    --color-light-olive: #{$color-light-olive}; //var(--color-olive, $color-light-olive);
+    --color-black: #{$color-black}; //var(--color-black, $color-black);
     --color-white: #{$color-white}; //var(--color-white, $color-white);
-    --color-orange: #{$color-orange}; //var(--color-orange, $color-orange);
-
-    --background-black: #{$background-black}; //var(--background-black, $background-black);
     
-   
-    /* Fonts */
-    --font-Roboto: #{$font-Roboto}; //var(--font-Roboto);
-    --font-Montserrat: #{$font-Montserrat};
-    --font-Gilroy: #{$font-Gilroy};
+    //Fonts
+    --font-basic: #{$font-basic}; //var(--font-basic);
+    --font-Clash: #{$font-Clash}; //var(--font-Clash);
 
-    /* size */
-    --nav-height-desktop: #{$nav-height-desktop}; //var(--nav-height-desktop, $nav-height-desktop);
+    // size
+    // --nav-height-desktop: #{$nav-height-desktop}; //var(--nav-height-desktop, $nav-height-desktop);
 
-    /* box */
+    // box
     --width: #{$width};
-    --gap: #{$gap};
+
 }

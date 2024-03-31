@@ -7,40 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME | TABURET</title>
 
-    <!-- <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./CSS/fonts.css">
-    <link rel="stylesheet" href="./CSS/style.css "> -->
+    <link rel="stylesheet" href="./css/styles-home.css">
+
 
 </head>
 
 <body>
-    <header class="header">
-        <div>
-            <img class="logo" src="./img/logo-taburet.svg" alt="logo taburet">
-            <section>
-                <img src="./img/icon-search.svg" alt="icon search">
-                <img src="./img/icon-shopping-cart.svg" alt="icon search">
-                <div class="shopping-cart">
-                    <div class="shopping-cart_badge">
-                        <p class="shopping-cart_badge-sum">29</p>
+    <header class="container header">
+        <div class="header-inner">
+            <div class="header-top header-top__padding header-top__border">
+                <img class="logo" src="./img/logo-taburet.svg" alt="logo taburet">
+                <section class="menu-icon">
+                    <i class="icon icon-search icon__padding"></i>
+                    <div class="shopping-cart">
+                        <i class="icon icon-shopping-cart icon__padding"></i>
+                        <div class="shopping-cart__badge">
+                            <p class="shopping-cart__badge-sum">29</p>
+                        </div>
                     </div>
-                    <img src="./img/icon-shopping-cart.svg" alt="icon shopping cart">
-                </div>
-                <button class="btn-burger">
-
-                </button>
-            </section>
+                    <select class="language icon__padding" name="language">
+                        <option selected value="UK">UA</option>
+                        <option value="EN">EN</option>
+                    </select>
+                    <button class="button-burger">
+                        <i class="icon-menu-burger-open icon  icon__padding"></i>
+                    </button>
+                </section>
+            </div>
+            <nav class="nav nav__padding">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__item-link  menu__item-link_activ" href="">Про нас</a></li>
+                    <li class="menu__item"><a class="menu__item-link " href="">Столи</a></li>
+                    <li class="menu__item"><a class="menu__item-link " href="">Стільчики</a></li>
+                    <li class="menu__item"><a class="menu__item-link " href="">Комплекти</a></li>
+                    <li class="menu__item"><a class="menu__item-link " href="">Доставка</a></li>
+                    <li class="menu__item"><a class="menu__item-link " href="">Контакти</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href=""></a>Про нас</li>
-                <li><a href=""></a>Столи</li>
-                <li><a href=""></a>Стільчики</li>
-                <li><a href=""></a>Комплекти</li>
-                <li><a href=""></a>Доставка</li>
-                <li><a href=""></a>Контакти</li>
-            </ul>
-        </nav>
     </header>
 </body>
 
