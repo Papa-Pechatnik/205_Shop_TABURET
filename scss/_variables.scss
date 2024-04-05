@@ -1,5 +1,5 @@
 //Color
-$color-dark-primary: #665A4E; //Dark Primary
+$color-dark-primary: #665a4e; //Dark Primary
 $color-primary: #AAA39D; //Primary
 $color-light-grey: #AAA39D;//Light Grey
 $color-dark-olive: #68846D; //Dark olive
@@ -7,6 +7,8 @@ $color-olive: #A5BDA5; //olive
 $color-light-olive: #EBF0EB; //Light olive
 $color-black: #171411;
 $color-white: #ffffff;
+
+$color-btn-link: #ecebe926;
 
 //Fonts
 $font-basic: 'Satoshi-Regular', Arial, Helvetica, sans-serif;
@@ -26,6 +28,8 @@ $width: 90rem; //1440px;
     --color-light-olive: #{$color-light-olive}; //var(--color-olive, $color-light-olive);
     --color-black: #{$color-black}; //var(--color-black, $color-black);
     --color-white: #{$color-white}; //var(--color-white, $color-white);
+
+    --color-btn-link: #{$color-btn-link}; //var(--color-btn-link, $color-btn-link);
     
     //Fonts
     --font-basic: #{$font-basic}; //var(--font-basic);
