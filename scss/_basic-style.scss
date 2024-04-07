@@ -22,7 +22,7 @@ h3 {
 }
 
 .container_padding {
-  padding: 0 clamp(1.5rem, 1.24211rem + 1.058vw, 1.75rem);
+  padding: 0 var(--padding);
 }
 
 .section_margin {
@@ -31,7 +31,16 @@ h3 {
 }
 
 /* logo */
-.logo {}
+.logo {
+  display: inline-block;
+  width: 6.875rem;//110px;
+  height: 1rem;
+  &__img {
+    width: 100%; 
+    height: 100%;
+  }
+}
+
 
 .icon {
   font-family: 'icomoon';
@@ -62,6 +71,14 @@ h3 {
 
     &:is(:hover, :focus) {
       background-color: var(--color-olive, $color-olive);
+    }
+  }
+
+  &_bg-dr-primary {
+    color: var(--color-white, $color-white);
+    background-color: var(--color-dark-primary, $color-dark-primary);
+    &:is(:hover, :focus) {
+      background-color: #17141199;
     }
   }
 

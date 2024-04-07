@@ -18,7 +18,9 @@
     <header class="container container_padding header">
         <div class="header-inner">
             <div class="header-top header-top_padding header-top_border">
-                <img class="logo" src="./img/logo-taburet.svg" alt="logo taburet">
+                <a class="logo" href="./index.html">
+                    <img class="logo__img" src="./img/logo-taburet.svg" alt="logo taburet">
+                </a>
                 <section class="menu-icon">
                     <i class="icon icon-search icon_padding"></i>
                     <div class="shopping-cart">
@@ -48,98 +50,116 @@
             </nav>
         </div>
     </header>
-    <main class="main container">
-        <section class="buy-chairs container_padding">
-            <div class="buy-chairs__box section_margin" aria-label="придбати стільчики">
-                <div class="buy-chairs__box-hero">
-                    <h1 class="buy-chairs__titel">
-                        <strong>Вишукані якісні стільчики</strong>
-                        з акцентом на довгостроковий дизайн.
-                    </h1>
-                    <a class="buy-chairs__btn btn-link" href="#">Переглянути стільчики</a>
-                    <p class="buy-chairs__subtitel">
-                        Український роздрібний бренд
-                        <strong>«TABURET» відкриває нову еру екологічних меблів, </strong>
-                        теплі природні кольори та якісні матеріали
-                        для вашого затишку та комфорту.
-                    </p>
+    <main class="main">
+        <div class="container">
+            <section class="buy-chairs container_padding">
+                <div class="buy-chairs__box section_margin" aria-label="придбати стільчики">
+                    <div class="buy-chairs__box-hero">
+                        <h1 class="buy-chairs__title">
+                            <strong>Вишукані якісні стільчики</strong>
+                            з акцентом на довгостроковий дизайн.
+                        </h1>
+                        <a class="buy-chairs__btn btn-link" href="./page/page-chairs/page-chairs.html">Переглянути
+                            стільчики</a>
+                        <p class="buy-chairs__subtitle">
+                            Український роздрібний бренд
+                            <strong>«TABURET» відкриває нову еру екологічних меблів, </strong>
+                            теплі природні кольори та якісні матеріали
+                            для вашого затишку та комфорту.
+                        </p>
+                    </div>
+                    <div class="buy-chairs__img">
+                        <img src="./page/page-home/img/chairs-start.png" alt="chairs">
+                    </div>
                 </div>
-                <div class="buy-chairs__img">
-                    <img src="./page/page-home/img/chairs-start.png" alt="chairs">
+            </section>
+        </div>
+        <div class="container">
+            <section class="popular-products section_margin container_padding" aria-label="популярні продукти">
+                <h2 class="popular-products__title">Популярні продукти</h2>
+                <ul class="popular-products__list">
+                    <li class="popular-product">
+                        <img class="popular-product__img"
+                            src="./page/page-home/img/popular-products/popular-products-img1.png"
+                            alt="popular-product_name">
+                        <h3 class="popular-product__title">
+                            <span class="popular-product__category">Стілець</span>
+                            <span class="popular-product__name">Logan</span>
+                        </h3>
+                        <p class="popular-product__price">
+                            <span class="price-sum__thousand">7</span>
+                            <span class="price-sum__hundreds">900</span>
+                            <span class="price-sum__currency">грн.</span>
+                        </p>
+                    </li>
+
+                    <li class="popular-product">
+                        <img class="popular-product__img"
+                            src="./page/page-home/img/popular-products/popular-products-img2.png"
+                            alt="popular-product_name">
+                        <h3 class="popular-product__title">
+                            <span class="popular-product__category">Стілець</span>
+                            <span class="popular-product__name">Лула</span>
+                        </h3>
+                        <p class="popular-product__price">
+                            <span class="price-sum__thousand">2</span>
+                            <span class="price-sum__hundreds">915</span>
+                            <span class="price-sum__currency">грн.</span>
+                        </p>
+                    </li>
+
+                    <li class="popular-product">
+                        <img class="popular-product__img"
+                            src="./page/page-home/img/popular-products/popular-products-img3.png"
+                            alt="popular-product_name">
+                        <h3 class="popular-product__title">
+                            <span class="popular-product__category">Стіл</span>
+                            <span class="popular-product__name">Нова</span>
+                        </h3>
+                        <p class="popular-product__price">
+                            <span class="price-sum__thousand">27</span>
+                            <span class="price-sum__hundreds">500</span>
+                            <span class="price-sum__currency">грн.</span>
+                        </p>
+                    </li>
+                    <li class="popular-product">
+                        <img class="popular-product__img"
+                            src="./page/page-home/img/popular-products/popular-products-img4.png"
+                            alt="popular-product_name">
+                        <h3 class="popular-product__title">
+                            <span class="popular-product__category">Стілець</span>
+                            <span class="popular-product__name">Лула Софт</span>
+                        </h3>
+                        <p class="popular-product__price">
+                            <span class="price-sum__thousand">3</span>
+                            <span class="price-sum__hundreds">070</span>
+                            <span class="price-sum__currency">грн.</span>
+                        </p>
+                    </li>
+                </ul>
+                <a class="popular-products__btn btn-link btn-link_bg-l-grey" href="#">Переглянути колекцію</a>
+            </section>
+        </div>
+
+        <section class="join-in">
+            <div class="container container_padding">
+                <div class="join-in__box section_margin" aria-label="Підпишіться на нашу розсилку">
+                    <div class="join-in__boxbox" data-join-in="padding">
+                        <h4 class="join-in__title">Приєднуйтесь
+                            <span>до нас</span>!
+                        </h4>
+                        <p class="join-in__subtitle"> Підпишіться на нашу розсилку,
+                            щоб отримувати ексклюзивні пропозиції щодо нових колекцій,
+                            розпродажів тощо
+                        </p>
+                        <form class="join-in__form" data-join-in="padding">
+                            <input class="" type="email" placeholder="your@email.com" minlength="3" maxlength="16">
+                            <button class="btn-link btn-link_bg-dr-primary">Підписатися</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
-        </section>
-
-        <section class="popular-products section_margin container_padding" aria-label="популярні продукти">
-            <h2 class="popular-products__titel">Популярні продукти</h2>
-            <ul class="popular-products__list">
-                <li class="popular-product">
-                    <img class="popular-product__img"
-                        src="./page/page-home/img/popular-products/popular-products-img1.png"
-                        alt="popular-product_name">
-                    <h3 class="popular-product__titel">
-                        <span class="popular-product__category">Стілець</span>
-                        <span class="popular-product__name">Logan</span>
-                    </h3>
-                    <p class="popular-product__price">
-                        <span class="price-sum__thousand">7</span>
-                        <span class="price-sum__hundreds">900</span>
-                        <span class="price-sum__currency">грн.</span>
-                    </p>
-                </li>
-
-                <li class="popular-product">
-                    <img class="popular-product__img"
-                        src="./page/page-home/img/popular-products/popular-products-img2.png"
-                        alt="popular-product_name">
-                    <h3 class="popular-product__titel">
-                        <span class="popular-product__category">Стілець</span>
-                        <span class="popular-product__name">Лула</span>
-                    </h3>
-                    <p class="popular-product__price">
-                        <span class="price-sum__thousand">2</span>
-                        <span class="price-sum__hundreds">915</span>
-                        <span class="price-sum__currency">грн.</span>
-                    </p>
-                </li>
-
-                <li class="popular-product">
-                    <img class="popular-product__img"
-                        src="./page/page-home/img/popular-products/popular-products-img3.png"
-                        alt="popular-product_name">
-                    <h3 class="popular-product__titel">
-                        <span class="popular-product__category">Стіл</span>
-                        <span class="popular-product__name">Нова</span>
-                    </h3>
-                    <p class="popular-product__price">
-                        <span class="price-sum__thousand">27</span>
-                        <span class="price-sum__hundreds">500</span>
-                        <span class="price-sum__currency">грн.</span>
-                    </p>
-                </li>
-                <li class="popular-product">
-                    <img class="popular-product__img"
-                        src="./page/page-home/img/popular-products/popular-products-img4.png"
-                        alt="popular-product_name">
-                    <h3 class="popular-product__titel">
-                        <span class="popular-product__category">Стілець</span>
-                        <span class="popular-product__name">Лула Софт</span>
-                    </h3>
-                    <p class="popular-product__price">
-                        <span class="price-sum__thousand">3</span>
-                        <span class="price-sum__hundreds">070</span>
-                        <span class="price-sum__currency">грн.</span>
-                    </p>
-                </li>
-            </ul>
-            <a class="popular-products__btn btn-link btn-link_bg-l-grey" href="#">Переглянути колекцію</a>
-        </section>
-
-        <section class="join-in container_padding">
-            <div class="join-in__box section_margin" aria-label="придбати стільчики">
-
-            </div>
-
         </section>
     </main>
 

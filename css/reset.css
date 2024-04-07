@@ -1,6 +1,6 @@
 p,
 ul,
-h1, h2, h3 {
+h1, h2, h3, h4 {
 margin: 0;
 }
 
@@ -12,6 +12,7 @@ ul {
 
 a {
   text-decoration: none;
+  line-height: normal;
 }
 strong {
     font-weight: normal;

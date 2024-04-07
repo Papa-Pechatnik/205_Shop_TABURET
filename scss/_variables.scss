@@ -15,6 +15,7 @@ $font-Clash: "ClashDisplay-Variable", Arial, Helvetica, sans-serif;
 // box
 $width: 90rem; //1440px;
 $moveaway: clamp(0rem, -9.2502rem + 15.417vw, 4.625rem); //960px - 0
+$container-padding: clamp(1.5rem, 1.24211rem + 1.058vw, 1.75rem);
 
 
 :root {
@@ -38,5 +39,6 @@ $moveaway: clamp(0rem, -9.2502rem + 15.417vw, 4.625rem); //960px - 0
     // box
     --width: #{$width};
     --moveaway: #{$moveaway}; //var(--moveaway);
+    --padding: #{$container-padding}; //var(--padding);
 
 }

@@ -20,7 +20,7 @@
     min-width: 290px;
   }
 
-  &__titel {
+  &__title {
     font-family: var(--font-Clash);
     @extend %font-size-xxl;
     line-height: 1.4;
@@ -30,12 +30,13 @@
     background-color: rgba(249, 249, 249, 0.15);
     color: var(--color-white, $color-white);
     margin-top: 2.5rem; //40px
+
     &:is(:hover, :focus) {
       background-color: rgba(249, 249, 249, 0.3);
     }
   }
 
-  &__subtitel {
+  &__subtitle {
     font-family: var(--font-basic);
     @extend %font-size-m;
     line-height: 1.5;
@@ -46,6 +47,7 @@
     max-width: 520px;
     width: 100%;
     min-width: 290px;
+
     & img {
       width: 100%;
     }
@@ -60,14 +62,17 @@
   margin-top: clamp(3rem, 1.20011rem + 5.333vw, 5rem);
   margin-bottom: clamp(2.375rem, 1.3625rem + 3vw, 3.5rem);
 
-  &__titel {
+  &__title {
     font-size: clamp(1.25rem, 0.575rem + 2vw, 2rem);
   }
 
   &__list {
+    margin-top: clamp(1.1875rem, 0.5125rem + 2vw, 1.9375rem);
+    margin-bottom: clamp(1.875rem, 1.5375rem + 1vw, 2.25rem);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
-    gap: 1.25rem; //20px
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    place-items: start center;
+    gap: 1rem 1.25rem; //20px
   }
 
   .btn-link {
@@ -76,14 +81,15 @@
 }
 
 .popular-product {
-  margin-top: clamp(1.1875rem, 0.5125rem + 2vw, 1.9375rem);
-  margin-bottom: clamp(1.875rem, 1.5375rem + 1vw, 2.25rem);
+  --gap: .5rem; //8px;
 
-  &__titel {
+  &__title {
     font-family: var(--font-Clash);
     @extend %font-size-l;
     margin-top: 1.5rem; //24px;
-    margin-bottom: .5rem; //8px
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
   }
 
   &__name {
@@ -91,8 +97,9 @@
   }
 
   &__price {
+    margin-top: var(--gap);
     @extend %font-size-m;
-    line-height: 150%;
+    line-height: 1.5;
   }
 
   &__img {
@@ -102,6 +109,77 @@
   }
 }
 
+//Приєднуйтесь до нас
+.join-in {
+  background-color: var(--color-light-grey, $color-light-grey);
+  padding-top: 52px;
+  padding-bottom: 65px;
+  color: var(--color-dark-primary, $color-dark-primary);
+  text-align: center;
+
+  &__box {
+    background-color: var(--color-white, $color-white);
+    @extend %flex-col-center;
+  }
+
+  &__boxbox {
+    padding-top: clamp(3rem, 1.87511rem + 3.333vw, 4.25rem); //540
+    padding-bottom: clamp(2.375rem, 1.47489rem + 2.667vw, 3.375rem);
+    max-width: 470px;
+  }
+
+  &__title {
+    font-family: var(--font-Clash);
+    font-size: 2.25rem; //36px
+    line-height: 1.4;
+
+  }
+
+  &__subtitle {
+    margin-top: 1rem; //16px
+    margin-bottom: clamp(1rem, -0.79989rem + 5.333vw, 3rem);
+    text-wrap: balance;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    // width: 100%;
+    border: none;
+
+    & input {
+      --pad: clamp(1rem, -1.60008rem + 10.667vw, 2rem);
+      outline: transparent;
+      width: 100%;
+      border: none;
+      @extend %font-size-s;
+      color: var(--color-white, $color-white);
+      background-color: var(--color-light-grey, $color-light-grey);
+      padding-left: var(--pad);
+      padding-right: var(--pad);
+
+      &::placeholder {
+        color: var(--color-dark-primary, $color-dark-primary);
+        opacity: 0.2;
+      }
+
+      &:hover {
+        background-color: var(--color-olive, $color-olive);
+      }
+
+      &:focus {
+        background-color: var(--color-dark-olive, $color-dark-olive);
+      }
+    }
+
+    & button {
+      @extend %font-size-s;
+      border: none;
+      line-height: 1.5;
+    }
+  }
+}
 
 @media screen and (max-width: 959.98px) {
   .buy-chairs.container_padding {
@@ -112,6 +190,12 @@
 @media screen and (max-width: 767.98px) {
   .buy-chairs__img {
     display: none;
+  }
+
+  .popular-products {
+    &__list {
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
   }
 }
 
@@ -126,15 +210,32 @@
       max-width: 100%;
     }
 
-    &__subtitel {
+    &__subtitle {
       order: 2;
     }
   }
 
-  .popular-products__btn {
+  .popular-products {
+    &__btn {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 
-    max-width: 100%;
-    width: 100%;
-    // margin: 20px;
+  .join-in__title span {
+    display: none;
+  }
+
+  .join-in {
+    padding: 0;
+
+    &>.container_padding {
+      padding: 0;
+    }
+  }
+
+  [data-join-in="padding"] {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
   }
 }
