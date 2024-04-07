@@ -1,14 +1,12 @@
 //Color
 $color-dark-primary: #665a4e; //Dark Primary
 $color-primary: #AAA39D; //Primary
-$color-light-grey: #AAA39D;//Light Grey
+$color-light-grey: #ecebe9;//Light Grey
 $color-dark-olive: #68846D; //Dark olive
 $color-olive: #A5BDA5; //olive
 $color-light-olive: #EBF0EB; //Light olive
 $color-black: #171411;
 $color-white: #ffffff;
-
-$color-btn-link1: rgba(236, 235, 233, 0.15);
 
 //Fonts
 $font-basic: 'Satoshi-Regular', Arial, Helvetica, sans-serif;
@@ -30,9 +28,7 @@ $moveaway: clamp(0rem, -9.2502rem + 15.417vw, 4.625rem); //960px - 0
     --color-black: #{$color-black}; //var(--color-black, $color-black);
     --color-white: #{$color-white}; //var(--color-white, $color-white);
 
-    --color-btn-link1: #{$color-btn-link1}; //var(--color-btn-link1, $color-btn-link1);
-    
-    //Fonts
+  //Fonts
     --font-basic: #{$font-basic}; //var(--font-basic);
     --font-Clash: #{$font-Clash}; //var(--font-Clash);
 

@@ -1,28 +1,71 @@
 :root {
   --color-dark-primary: #665a4e;
   --color-primary: #AAA39D;
-  --color-light-grey: #AAA39D;
+  --color-light-grey: #ecebe9;
   --color-dark-olive: #68846D;
   --color-olive: #A5BDA5;
   --color-light-olive: #EBF0EB;
   --color-black: #171411;
   --color-white: #ffffff;
-  --color-btn-link1: rgba(236, 235, 233, 0.15);
   --font-basic: Satoshi-Regular, Arial, Helvetica, sans-serif;
   --font-Clash: ClashDisplay-Variable, Arial, Helvetica, sans-serif;
   --width: 90rem;
   --moveaway: clamp(0rem, -9.2502rem + 15.417vw, 4.625rem);
 }
 
+.popular-products, .buy-chairs__box-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-inner, .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav, .shopping-cart__badge, .menu-icon, .header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.popular-product__price, .buy-chairs__subtitel {
+  font-size: 1.125rem;
+}
+
+.popular-product__titel {
+  font-size: 1.25rem;
+}
+
+.buy-chairs__titel {
+  font-size: 2rem;
+}
+
+.menu__item::first-letter {
+  text-transform: uppercase;
+}
+
+.menu__item-link:hover, .btn-link {
+  transition: all 0.5s ease;
+}
+
 /* ---------- 2.Basic style----------*/
 /* 2.1 Basic tags */
 body {
   margin: 0;
-  background-color: var(--color-primary, #AAA39D);
+  background-color: var(--color-white, #ffffff);
   font-family: var(--font-basic);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -59,13 +102,18 @@ h1 {
 .btn-link {
   display: inline-block;
   padding: 1rem 2rem;
-  max-width: fit-content;
+  max-width: max-content;
+  box-sizing: border-box;
   text-align: center;
 }
-.btn-link__bg-grey {
-  background-color: var(--color-btn-link1, rgba(236, 235, 233, 0.15));
+.btn-link_bg-l-grey {
+  color: var(--color-dark-primary, #665a4e);
+  background-color: var(--color-light-grey, #ecebe9);
 }
-.btn-link__color-white {
+.btn-link_bg-l-grey:is(:hover, :focus) {
+  background-color: var(--color-olive, #A5BDA5);
+}
+.btn-link_color-white {
   color: var(--color-white, #ffffff);
 }
 
@@ -77,7 +125,7 @@ h1 {
   width: 100%;
 }
 .header-top_padding {
-  padding: 1.75rem 0;
+  padding: clamp(1rem, -0.95rem + 8vw, 1.75rem) 0;
 }
 .header-top_border {
   border-bottom: 1px solid rgba(102, 90, 78, 0.15);
@@ -114,7 +162,7 @@ h1 {
   padding: 0;
 }
 .language option {
-  background-color: var(--color-light-grey, #AAA39D);
+  background-color: var(--color-light-grey, #ecebe9);
   color: var(--color-black, #171411);
 }
 .language option:checked {
@@ -176,7 +224,21 @@ h1 {
   transition: width 0.5s;
 }
 
-.buy-chairs {
+@media screen and (max-width: 539.98px) {
+  .header-top {
+    justify-content: start;
+  }
+  .header-top_border {
+    border-bottom: none;
+  }
+  .button-burger {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+}
+.buy-chairs__box {
   --mar: clamp(1.25rem, -3.91144rem + 10.753vw, 3.75rem);
   margin-top: var(--mar);
   margin-bottom: var(--mar);
@@ -187,8 +249,6 @@ h1 {
   color: var(--color-white, #ffffff);
 }
 .buy-chairs__box-hero {
-  display: flex;
-  flex-direction: column;
   --pad60: clamp(2.5rem, 1.75008rem + 2.222vw, 3.75rem);
   --pad24: clamp(1.5rem, 0.15rem + 4vw, 3.75rem);
   padding: var(--pad60) var(--pad24);
@@ -196,17 +256,18 @@ h1 {
 }
 .buy-chairs__titel {
   font-family: var(--font-Clash);
-  font-size: 2rem;
   line-height: 1.4;
 }
 .buy-chairs__btn {
-  background-color: var(--color-btn-link1, rgba(236, 235, 233, 0.15));
+  background-color: rgba(249, 249, 249, 0.15);
   color: var(--color-white, #ffffff);
   margin-top: 2.5rem;
 }
+.buy-chairs__btn:is(:hover, :focus) {
+  background-color: rgba(249, 249, 249, 0.3);
+}
 .buy-chairs__subtitel {
   font-family: var(--font-basic);
-  font-size: 1.125rem;
   line-height: 1.5;
   margin-top: clamp(2.5rem, -3.57152rem + 12.649vw, 7.8125rem);
 }
@@ -219,8 +280,47 @@ h1 {
   width: 100%;
 }
 
-@media screen and (max-width: 960px) {
-  main.main {
+.popular-products {
+  box-sizing: border-box;
+  color: var(--color-dark-primary, #665a4e);
+  margin-top: clamp(3rem, 1.20011rem + 5.333vw, 5rem);
+  margin-bottom: clamp(2.375rem, 1.3625rem + 3vw, 3.5rem);
+  border: 2px solid red;
+}
+.popular-products__titel {
+  font-size: clamp(1.25rem, 0.575rem + 2vw, 2rem);
+}
+.popular-products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+  gap: 1.25rem;
+}
+.popular-products .btn-link {
+  align-self: center;
+}
+
+.popular-product {
+  margin-top: clamp(1.1875rem, 0.5125rem + 2vw, 1.9375rem);
+  margin-bottom: clamp(1.875rem, 1.5375rem + 1vw, 2.25rem);
+}
+.popular-product__titel {
+  font-family: var(--font-Clash);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.popular-product__name {
+  text-wrap: nowrap;
+}
+.popular-product__price {
+  line-height: 150%;
+}
+.popular-product__img {
+  align-self: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 959.98px) {
+  .buy-chairs.container_padding {
     padding: 0;
   }
 }
@@ -230,7 +330,7 @@ h1 {
   }
 }
 @media screen and (max-width: 539.98px) {
-  .buy-chairs {
+  .buy-chairs__box {
     --mar: 0;
   }
   .buy-chairs__btn {
@@ -240,28 +340,8 @@ h1 {
   .buy-chairs__subtitel {
     order: 2;
   }
-}
-.header, .header-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-top, .menu-icon, .shopping-cart__badge, .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body, h2 {
-  font-size: 1rem;
-}
-
-.menu__item::first-letter {
-  text-transform: uppercase;
-}
-
-.menu__item-link:hover {
-  transition: all 0.5s ease;
+  .popular-products__btn {
+    max-width: 100%;
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles-home.css.map */

@@ -1,18 +1,19 @@
 //MAIN
 .buy-chairs {
-  --mar: clamp(1.25rem, -3.91144rem + 10.753vw, 3.75rem);
-  margin-top: var(--mar);
-  margin-bottom: var(--mar);
-  box-sizing: border-box;
+  &__box {
+    --mar: clamp(1.25rem, -3.91144rem + 10.753vw, 3.75rem);
+    margin-top: var(--mar);
+    margin-bottom: var(--mar);
+    box-sizing: border-box;
 
-  display: flex;
-  font-weight: 400;
-  background-color: var(--color-dark-primary, $color-dark-primary);
-  color: var(--color-white, $color-white);
-  &__box-hero {
     display: flex;
-    flex-direction: column;
+    font-weight: 400;
+    background-color: var(--color-dark-primary, $color-dark-primary);
+    color: var(--color-white, $color-white);
+  }
 
+  &__box-hero {
+    @extend %flex-col;
     --pad60: clamp(2.5rem, 1.75008rem + 2.222vw, 3.75rem);
     --pad24: clamp(1.5rem, 0.15rem + 4vw, 3.75rem);
     padding: var(--pad60) var(--pad24);
@@ -21,19 +22,22 @@
 
   &__titel {
     font-family: var(--font-Clash);
-    font-size: 2rem; //32px;
+    @extend %font-size-xxl;
     line-height: 1.4;
   }
 
   &__btn {
-    background-color: var(--color-btn-link1, $color-btn-link1);
+    background-color: rgba(249, 249, 249, 0.15);
     color: var(--color-white, $color-white);
     margin-top: 2.5rem; //40px
+    &:is(:hover, :focus) {
+      background-color: rgba(249, 249, 249, 0.3);
+    }
   }
 
   &__subtitel {
     font-family: var(--font-basic);
-    font-size: 1.125rem; // 18px;
+    @extend %font-size-m;
     line-height: 1.5;
     margin-top: clamp(2.5rem, -3.57152rem + 12.649vw, 7.8125rem);
   }
@@ -49,28 +53,90 @@
   }
 }
 
-@media screen and (max-width: 960px) {
-  main.main {
+//Популярні продукти
+.popular-products {
+  @extend %flex-col;
+  box-sizing: border-box;
+  color: var(--color-dark-primary, $color-dark-primary);
+  margin-top: clamp(3rem, 1.20011rem + 5.333vw, 5rem);
+  margin-bottom: clamp(2.375rem, 1.3625rem + 3vw, 3.5rem);
+  border: 2px solid red;
+
+  &__titel {
+    font-size: clamp(1.25rem, 0.575rem + 2vw, 2rem);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+    gap: 1.25rem; //20px
+  }
+
+  .btn-link {
+    align-self: center;
+  }
+}
+
+.popular-product {
+  margin-top: clamp(1.1875rem, 0.5125rem + 2vw, 1.9375rem);
+  margin-bottom: clamp(1.875rem, 1.5375rem + 1vw, 2.25rem);
+
+  &__titel {
+    font-family: var(--font-Clash);
+    @extend %font-size-l;
+    margin-top: 1.5rem; //24px;
+    margin-bottom: .5rem; //8px
+  }
+
+  &__name {
+    text-wrap: nowrap;
+  }
+
+  &__price {
+    @extend %font-size-m;
+    line-height: 150%;
+  }
+
+  &__img {
+    align-self: center;
+    // min-width: 10.125rem; //162px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 959.98px) {
+  .buy-chairs.container_padding {
     padding: 0;
   }
 }
 
 @media screen and (max-width: 767.98px) {
   .buy-chairs__img {
-      display: none;
-    }
+    display: none;
   }
+}
 
-  @media screen and (max-width: 539.98px) {
-    .buy-chairs {
+@media screen and (max-width: 539.98px) {
+  .buy-chairs {
+    &__box {
       --mar: 0;
-      &__btn {
-        order: 3;
-        max-width: 100%;
-      }
+    }
 
-      &__subtitel {
-        order: 2;
-      }
+    &__btn {
+      order: 3;
+      max-width: 100%;
+    }
+
+    &__subtitel {
+      order: 2;
     }
   }
+
+  .popular-products__btn {
+
+    max-width: 100%;
+    width: 100%;
+    // margin: 20px;
+  }
+}

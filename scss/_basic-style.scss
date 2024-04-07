@@ -2,17 +2,15 @@
 /* 2.1 Basic tags */
 body {
   margin: 0;
-  background-color: var(--color-primary, $color-primary);
+  background-color: var(--color-white, $color-white);
   font-family: var(--font-basic);
   @extend %font-size-s;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-weight: 400;
-}
-
-h2 {
-  @extend %font-size-s;
 }
 
 /* 2.2 Basic class */
@@ -53,13 +51,21 @@ h2 {
 .btn-link {
   display: inline-block;
   padding: 1rem 2rem; //16px 32px;
-  max-width: fit-content;
+  max-width: max-content;
+  box-sizing: border-box;
   text-align: center;
+  @extend %transition;
 
-  &__bg-grey {
-    background-color: var(--color-btn-link1, $color-btn-link1);
+  &_bg-l-grey {
+    color: var(--color-dark-primary, $color-dark-primary);
+    background-color: var(--color-light-grey, $color-light-grey);
+
+    &:is(:hover, :focus) {
+      background-color: var(--color-olive, $color-olive);
+    }
   }
-  &__color-white {
+
+  &_color-white {
     color: var(--color-white, $color-white);
   }
 }
