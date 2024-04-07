@@ -7,8 +7,8 @@ body {
   @extend %font-size-s;
 }
 
-a {
-  text-decoration: none;
+h1 {
+  font-weight: 400;
 }
 
 h2 {
@@ -20,20 +20,16 @@ h2 {
   margin: 0 auto;
   max-width: var(--width);
   box-sizing: border-box;
-  border: 2px solid rgb(16, 119, 27);
+  // border: 2px solid rgb(16, 119, 27);
 }
 
 .container_padding {
   padding: 0 clamp(1.5rem, 1.24211rem + 1.058vw, 1.75rem);
 }
 
-.box-padding {
-  padding-left: clamp(1.5rem, -0.37515rem + 5.556vw, 4.625rem);
-  padding-right: clamp(1.5rem, -0.37515rem + 5.556vw, 4.625rem);
-}
-
-.section_padding {
-  overflow: hidden;
+.section_margin {
+  margin-left: var(--moveaway); //540px - 0
+  margin-right: var(--moveaway); //540px - 0
 }
 
 /* logo */
@@ -55,7 +51,15 @@ h2 {
 }
 
 .btn-link {
-  &__padding {
-    padding: 1rem 2rem; //16px 32px;
+  display: inline-block;
+  padding: 1rem 2rem; //16px 32px;
+  max-width: fit-content;
+  text-align: center;
+
+  &__bg-grey {
+    background-color: var(--color-btn-link1, $color-btn-link1);
+  }
+  &__color-white {
+    color: var(--color-white, $color-white);
   }
 }
