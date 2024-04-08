@@ -196,6 +196,19 @@
   }
 }
 
+//footer
+.footer {
+  background-color: var(--color-dark-primary, $color-dark-primary);
+  border: none;
+  &-top {
+    display: flex;
+  }
+}
+
+.nav-footer {
+  display: flex;
+}
+
 @media screen and (max-width: 959.98px) {
   .buy-chairs.container_padding {
     padding: 0;

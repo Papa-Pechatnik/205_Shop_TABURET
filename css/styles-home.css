@@ -410,6 +410,18 @@ h3 {
   margin-bottom: 38px;
 }
 
+.footer {
+  background-color: var(--color-dark-primary, #665a4e);
+  border: none;
+}
+.footer-top {
+  display: flex;
+}
+
+.nav-footer {
+  display: flex;
+}
+
 @media screen and (max-width: 959.98px) {
   .buy-chairs.container_padding {
     padding: 0;
