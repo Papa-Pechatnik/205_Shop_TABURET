@@ -399,6 +399,17 @@ h3 {
   line-height: 1.5;
 }
 
+.brand-history__box {
+  display: flex;
+}
+.brand-history__article {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5625rem;
+  margin-top: 72px;
+  margin-bottom: 38px;
+}
+
 @media screen and (max-width: 959.98px) {
   .buy-chairs.container_padding {
     padding: 0;
