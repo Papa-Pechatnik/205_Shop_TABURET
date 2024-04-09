@@ -154,7 +154,7 @@
         <section class="join-in">
             <div class="container container_padding">
                 <div class="join-in__box section_margin" aria-label="Підпишіться на нашу розсилку">
-                    <div class="join-in__boxbox" data-join-in="padding">
+                    <div class="join-in__boxbox" data-form="padding">
                         <h4 class="join-in__title">Приєднуйтесь
                             <span>до нас</span>!
                         </h4>
@@ -162,8 +162,10 @@
                             щоб отримувати ексклюзивні пропозиції щодо нових колекцій,
                             розпродажів тощо
                         </p>
-                        <form class="join-in__form" data-join-in="padding">
-                            <input class="" type="email" placeholder="your@email.com" minlength="3" maxlength="16">
+                        <form class="form" data-form="padding">
+                            <label for="">Підишіться, щоб отримувати додаткові пропозиції</label>
+                            <input class="" type="email" autocomplete="email" placeholder="your@email.com" minlength="3"
+                                maxlength="16">
                             <button class="btn-link btn-link_bg-dr-primary">Підписатися</button>
                         </form>
                     </div>
@@ -202,41 +204,61 @@
     </main>
     <footer class="footer">
         <div class="container container_padding">
-            <section class="footer-top">
-                <nav class="nav-footer">
-                    <section>
-                        <p>Каталог</p>
-                        <ul>
-                            <li><a href="./page/page-desk/page-desk.html">Столи</a></li>
-                            <li><a href="./page/page-chairs/page-chairs.html">Стільці</a></li>
-                            <li><a href="./page/page-set-furniture/page-set-furniture.html">Комплекти</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <p>Про компанію</p>
-                        <ul>
-                            <li><a href="./page/page-about-us/page-about-us.html">Про нас</a></li>
-                            <li><a href="#">Контакти</a></li>
-                            <li><a href="#">Доставка</a></li>
-                        </ul>
-                    </section>
+            <section class="footer-top footer-top_border">
+                <nav class="nav-footer section_margin">
+                    <ul class="footer-menu__list">
+                        <li>
+                            <p>Каталог</p>
+                        </li>
+                        <li>
+                            <a class="menu__item-link" href="./page/page-desk/page-desk.html">Столи</a>
+                        </li>
+                        <li>
+                            <a class="menu__item-link" href="./page/page-chairs/page-chairs.html">Стільці</a>
+                        </li>
+                        <li>
+                            <a class="menu__item-link"
+                                href="./page/page-set-furniture/page-set-furniture.html">Комплекти</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-menu__list">
+                        <li>
+                            <p>Про компанію</p>
+                        </li>
+                        <li>
+                            <a class="menu__item-link" href="./page/page-about-us/page-about-us.html">Про нас</a>
+                        </li>
+                        <li>
+                            <a class="menu__item-link" href="#">Контакти</a>
+                        </li>
+                        <li>
+                            <a class="menu__item-link" href="#">Доставка</a>
+                        </li>
+                    </ul>
                 </nav>
-                <form class="join-in__form" data-join-in="padding">
-                    <input class="" type="email" placeholder="your@email.com" minlength="3" maxlength="16">
-                    <button class="btn-link btn-link_bg-dr-primary">Підписатися</button>
+                <form class="footer-form form" data-form="padding">
+                    <label for="">Підишіться, щоб отримувати додаткові пропозиції</label>
+                    <div class="footer-form__input">
+                        <input class="" type="email" autocomplete="email" placeholder="your@email.com" minlength="3"
+                            maxlength="16">
+                        <button class="btn-link btn-link_bg-white">Підписатися</button>
+                    </div>
+
                 </form>
             </section>
             <section class="footer-bottom">
-                <p>&copy; Copyright 2024 by Anneli Nova</p>
+                <p class="footer-bottom__copyright">&copy; Copyright 2024 by Anneli Nova</p>
                 <ul class="menu-social-media">
-                    <li>
-                        <a class="icon-instagram" href=""></a>
+                    <li class="social-media__item">
+                        <a class="social-media__item_link icon-instagram"
+                            href="https://www.instagram.com/taburet.com.ua?igsh=MW05Zmw4cjJrcG40bA=="></a>
                     </li>
-                    <li>
-                        <a class="icon-facebook" href=""></a>
+                    <li class="social-media__item">
+                        <a class="social-media__item_link icon-facebook" href=""></a>
                     </li>
-                    <li>
-                        <a class="icon-linkendin" href=""></a>
+                    <li class="social-media__item">
+                        <a class="social-media__item_link icon-linkedin"
+                            href="https://www.linkedin.com/company/taburet/"></a>
                     </li>
                 </ul>
             </section>

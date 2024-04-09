@@ -82,7 +82,60 @@ h3 {
     }
   }
 
+  &_bg-white {
+    color: var(--color-dark-primary, $color-dark-primary);
+    background-color: var(--color-white, $color-white);
+    &:is(:hover, :focus) {
+      background-color: var(--color-light-grey, $color-light-grey);
+    }
+  }
+
   &_color-white {
     color: var(--color-white, $color-white);
   }
 }
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  border: none;
+  & label {
+   display: none;
+  }
+
+  & input {
+    box-sizing: border-box;
+    --pad: clamp(1rem, -1.60008rem + 10.667vw, 2rem);
+    outline: transparent;
+    width: 100%;
+    border: none;
+    @extend %font-size-s;
+    color: var(--color-white, $color-white);
+    background-color: var(--color-light-grey, $color-light-grey);
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+    cursor: pointer;
+
+    &::placeholder {
+      color: var(--color-dark-primary, $color-dark-primary);
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background-color: var(--color-olive, $color-olive);
+    }
+
+    &:focus {
+      background-color: var(--color-dark-olive, $color-dark-olive);
+    }
+  }
+
+  & button {
+    @extend %font-size-s;
+    border: none;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+}
+
