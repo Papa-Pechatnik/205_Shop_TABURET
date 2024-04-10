@@ -155,10 +155,11 @@
   }
 
   &__article {
-   
+
     display: flex;
     flex-direction: column;
     row-gap: 1.5625rem; //25px
+
   }
 
   &__title {
@@ -171,6 +172,7 @@
 
   &__text {
     @extend %font-size-m;
+    text-align: justify;
     color: var(--color-primary, $color-primary);
   }
 
@@ -293,12 +295,12 @@
     }
   }
 
-
+  .brand-history__article .btn-link {
+    max-width: 100%;
+  }
 
   [data-form="padding"] {
     padding-left: var(--padding);
     padding-right: var(--padding);
   }
-
-
 }

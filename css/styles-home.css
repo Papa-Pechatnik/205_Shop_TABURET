@@ -444,6 +444,7 @@ h3 {
   color: var(--color-dark-primary, #665a4e);
 }
 .brand-history__text {
+  text-align: justify;
   color: var(--color-primary, #AAA39D);
 }
 .brand-history__img {
@@ -535,6 +536,9 @@ h3 {
   .join-in__title span {
     display: none;
   }
+  .brand-history__article .btn-link {
+    max-width: 100%;
+  }
   [data-form=padding] {
     padding-left: var(--padding);
     padding-right: var(--padding);
@@ -554,6 +558,8 @@ h3 {
 .footer-bottom__copyright {
   font-size: 0.875rem;
   color: var(--color-white, #ffffff);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .footer-menu__list {
   display: flex;
@@ -662,5 +668,10 @@ h3 {
   .nav-footer {
     justify-content: space-evenly;
     width: 100%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .menu-social-media {
+    display: none;
   }
 }/*# sourceMappingURL=styles-home.css.map */
