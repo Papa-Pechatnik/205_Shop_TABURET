@@ -174,31 +174,36 @@
         </section>
 
         <section class="brand-history">
-            <div class="brand-history__box">
-                <article class="brand-history__article">
-                    <p class="brand-history__title">Зі скромної студії, розташованої в тихому,
-                        невеликому містечку до відомого бренду
-                        що не зупиняється на 50 торгових точках.
-                    </p>
-                    <p class="brand-history__text">
-                        Коли <strong>Taburet</strong> було засновано, наша місія була чіткою: демократизувати
-                        високоякісні
-                        меблі, забезпечивши їх доступність для всіх. В основі нашого духу лежить глибоко вкорінене
-                        зобов’язання створювати меблі, які випромінюють досконалість і пронизані любов’ю на кожному
-                        етапі
-                        створення.
-                    </p>
-                    <p class="brand-history__text">
-                        Керуючись нашою пристрастю до дизайну та непохитною відданістю якості, ми постійно прагнемо
-                        змінити
-                        стандарти меблевої промисловості.
-                    </p>
-                    <button>Підписатися</button>
-                </article>
-                <div class="brand-history__img">
-                    <img src="./page/page-home/img/brand-history/chairs-big.png" alt="chairs">
-                    <!-- <img src="./page/page-home/img/brand-history/chairs-small.png" alt="chairs"> -->
+            <div class="container">
+                <div class="brand-history__box ">
+                    <article class="brand-history__article container_padding section_margin">
+                        <p class="brand-history__title">
+                            Зі скромної студії,
+                            <span class="tag_off">розташованої в тихому, невеликому містечку </span>
+                            до відомого бренду
+                            <span class="tag_off">що не зупиняється на 50 торгових точках.</span>
+                        </p>
+                        <p class="brand-history__text">
+                            Коли <strong>Taburet</strong> було засновано, наша місія була чіткою: демократизувати
+                            високоякісні
+                            меблі, забезпечивши їх доступність для всіх. В основі нашого духу лежить глибоко вкорінене
+                            зобов’язання створювати меблі, які випромінюють досконалість і пронизані любов’ю на кожному
+                            етапі
+                            створення.
+                        </p>
+                        <p class="brand-history__text tag_off">
+                            Керуючись нашою пристрастю до дизайну та непохитною відданістю якості, ми постійно прагнемо
+                            змінити
+                            стандарти меблевої промисловості.
+                        </p>
+                        <a class="btn-link btn-link_bg-l-grey" href="#footer-form">Підписатися на розсилку</a>
+    
+                    </article>
                 </div>
+            </div>
+            <div class="brand-history__img">
+                <img class="brand-history__img-big" src="./page/page-home/img/brand-history/chairs-big.png" alt="chairs">
+                <img class="brand-history__img-small" src="./page/page-home/img/brand-history/chairs-small.png" alt="chairs">
             </div>
         </section>
     </main>
@@ -236,7 +241,7 @@
                         </li>
                     </ul>
                 </nav>
-                <form class="footer-form form" data-form="padding">
+                <form id = "footer-form" class="footer-form form" data-form="padding">
                     <label for="">Підишіться, щоб отримувати додаткові пропозиції</label>
                     <div class="footer-form__input">
                         <input class="" type="email" autocomplete="email" placeholder="your@email.com" minlength="3"

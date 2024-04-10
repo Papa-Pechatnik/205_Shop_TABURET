@@ -145,23 +145,71 @@
 
 //История бренда
 .brand-history {
+  position: relative;
+  width: 100%;
+
   &__box {
-    display: flex;
+    width: 50%;
+    padding-top: clamp(3rem, -1.12896rem + 8.602vw, 5rem);
+    padding-bottom: clamp(2.375rem, 0.31052rem + 4.301vw, 3.375rem);
   }
 
   &__article {
+   
     display: flex;
     flex-direction: column;
     row-gap: 1.5625rem; //25px
+  }
 
-    margin-top: 72px;
-    margin-bottom: 38px;
+  &__title {
+    font-family: var(--font-Clash);
+    @extend %font-size-xl;
+    text-wrap: balance;
+    line-height: 140%;
+    color: var(--color-dark-primary, $color-dark-primary);
+  }
+
+  &__text {
+    @extend %font-size-m;
+    color: var(--color-primary, $color-primary);
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    max-width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transform: translate(0, -50%);
+
+    & img {
+      height: 100%;
+    }
+
+    & .brand-history__img-small {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1439.98px) {
+  .brand-history__img {
+    left: 50%;
   }
 }
 
 @media screen and (max-width: 959.98px) {
   .buy-chairs.container_padding {
     padding: 0;
+  }
+
+  .brand-history__title .tag_off {
+    display: none;
+  }
+
+  .brand-history__text.tag_off {
+    display: none;
   }
 }
 
@@ -175,6 +223,39 @@
       grid-template-columns: repeat(2, minmax(140px, 1fr));
     }
   }
+
+  .brand-history {
+    display: flex;
+    flex-direction: column;
+
+    &__box {
+      width: 100%;
+    }
+
+    & .brand-history__img-big {
+      display: none;
+    }
+
+    & .brand-history__img-small {
+      display: block;
+    }
+  }
+
+
+
+  .brand-history__img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    transform: translate(0, 0);
+  }
+
 }
 
 @media screen and (max-width: 575.98px) {
@@ -200,20 +281,24 @@
     }
   }
 
-  .join-in__title span {
-    display: none;
-  }
-
   .join-in {
     padding: 0;
 
     &>.container_padding {
       padding: 0;
     }
+
+    &__title span {
+      display: none;
+    }
   }
+
+
 
   [data-form="padding"] {
     padding-left: var(--padding);
     padding-right: var(--padding);
   }
+
+
 }
