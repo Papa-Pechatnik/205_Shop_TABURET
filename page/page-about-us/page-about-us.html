@@ -7,15 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Про нас | TABURET</title>
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./CSS/fonts.css">
-    <link rel="stylesheet" href="./css/styles-home.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/styles-about-us.css">
 
 
 </head>
 
 <body>
-Про нас
+    <header>
+        <section class="delivery-info" data-delivery="close"> 
+            <!-- data-delivery="close" для главной страницы для других страниц data-delivery="open"-->
+            <div class="container container_padding">
+                <div class="delivery-info__box">
+                    <button class="delivery-button"><i class="icon-close"></i></button>
+                    <div class="delivery-info__text">
+                        <i class="icon-delivery"></i>
+                        <p>
+                            Безкоштовна доставка 
+                            <span class="tag_off">для замолень</span> від
+                            <span>1000</span> грн.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="header container container_padding">
+            <div class="header-inner">
+                <div class="header-top header-top_padding header-top_border">
+                    <a class="logo" href="../../index.html">
+                        <img class="logo__img" src="../../img/logo-taburet.svg" alt="logo taburet">
+                    </a>
+                    <section class="menu-icon">
+                        <i class="icon icon-search icon_padding"></i>
+                        <div class="shopping-cart">
+                            <i class="icon icon-shopping-cart icon_padding"></i>
+                            <div class="shopping-cart__badge">
+                                <p class="shopping-cart__badge-sum">29</p>
+                            </div>
+                        </div>
+                        <select class="language icon_padding" name="language">
+                            <option selected value="UK">UA</option>
+                            <option value="EN">EN</option>
+                        </select>
+                        <button class="button-burger">
+                            <i class="icon-menu-burger-open icon icon_padding"></i>
+                        </button>
+                    </section>
+                </div>
+                <nav class="nav nav_padding">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a class="menu__item-link  menu__item-link_activ"
+                                href="../../page/page-about-us/page-about-us.html">Про нас</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link " href="../../page/page-desk/page-desk.html">Столи</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link " href="../../page/page-chairs/page-chairs.html">Стільчики</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link "
+                                href="../../page/page-set-furniture/page-set-furniture.html">Комплекти</a>
+                        </li>
+                        <li class="menu__item"><a class="menu__item-link " href="">Доставка</a></li>
+                        <li class="menu__item"><a class="menu__item-link " href="">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    
+
 </body>
 
 </html>

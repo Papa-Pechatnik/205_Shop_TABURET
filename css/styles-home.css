@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.nav, .shopping-cart__badge, .menu-icon, .header-top {
+.nav, .shopping-cart__badge, .menu-icon, .header-top, .delivery-info__text, .delivery-info__box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@
   text-transform: uppercase;
 }
 
-.social-media__item_link, .social-media__item, .footer-top .form, .menu__item-link:hover, .btn-link {
+.social-media__item_link, .social-media__item, .footer-top .form, .popular-product__img, .popular-product__price, .menu__item-link:hover, .delivery-button, .btn-link {
   transition: all 0.5s ease;
 }
 
@@ -188,6 +188,42 @@ h3 {
   cursor: pointer;
 }
 
+.delivery-info {
+  background-color: var(--color-dark-primary);
+}
+.delivery-info[data-delivery=open] {
+  display: block;
+}
+.delivery-info[data-delivery=close] {
+  display: none;
+}
+.delivery-info__box {
+  position: relative;
+  column-gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-white);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.delivery-info__text {
+  column-gap: 0.5rem;
+}
+
+.delivery-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  color: var(--color-white);
+}
+.delivery-button:hover .icon-close {
+  color: var(--color-primary, #AAA39D);
+}
+
+.header {
+  width: 100%;
+}
 .header-inner {
   width: 100%;
 }
@@ -297,7 +333,8 @@ h3 {
 }
 
 @media screen and (max-width: 767.98px) {
-  .header-top {
+  .header-top,
+  .delivery-info__box {
     justify-content: start;
   }
 }
@@ -309,6 +346,9 @@ h3 {
     display: block;
   }
   .nav {
+    display: none;
+  }
+  .icon-delivery .tag_off {
     display: none;
   }
 }
@@ -377,6 +417,14 @@ h3 {
 
 .popular-product {
   --gap: .5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.popular-product:is(:hover, :focus) .popular-product__img {
+  scale: 1.1;
+}
+.popular-product:is(:hover, :focus) .popular-product__price {
+  font-weight: 700;
 }
 .popular-product__title {
   font-family: var(--font-Clash);
@@ -505,11 +553,15 @@ h3 {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
+    aspect-ratio: 1;
     width: 100%;
     left: 0;
+    max-height: 100%;
     height: 100%;
-    overflow: hidden;
     transform: translate(0, 0);
+  }
+  .brand-history__img img {
+    height: 100%;
   }
 }
 @media screen and (max-width: 575.98px) {

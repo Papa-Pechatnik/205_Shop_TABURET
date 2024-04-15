@@ -47,7 +47,7 @@
 .icon-menu-burger-open:before {
   content: "\e903";
 }
-.icon-menu-burger-close:before {
+.icon-close:before {
   content: "\e904";
 }
 .icon-purchase:before {
